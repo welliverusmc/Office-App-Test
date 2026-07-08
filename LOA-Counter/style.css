@@ -168,39 +168,27 @@ body {
 }
 
 .pitches {
-  --row-a: #c62828;
-  --row-b: #7f1515;
-  --glow: rgba(220, 38, 38, 0.28);
+    --accent: #C62828;   /* Rich Red */
 }
 
 .stories {
-  --row-a: #e86a08;
-  --row-b: #8f2d04;
-  --glow: rgba(235, 105, 8, 0.28);
+    --accent: #D96A08;   /* Burnt Orange */
 }
 
 .value {
-  --row-a: #d59a06;
-  --row-b: #7f6202;
-  --glow: rgba(218, 166, 15, 0.28);
+    --accent: #C89A14;   /* Gold */
 }
 
 .tables {
-  --row-a: #3f9a47;
-  --row-b: #145a23;
-  --glow: rgba(75, 175, 82, 0.24);
+    --accent: #2E7D32;   /* Green */
 }
 
 .credit {
-  --row-a: #0b91a8;
-  --row-b: #075068;
-  --glow: rgba(18, 166, 190, 0.24);
+    --accent: #007C91;   /* Teal */
 }
 
 .closes {
-  --row-a: #3946b0;
-  --row-b: #19265f;
-  --glow: rgba(75, 89, 210, 0.25);
+    --accent: #3949AB;   /* Royal Blue */
 }
 
 .reset-area {
