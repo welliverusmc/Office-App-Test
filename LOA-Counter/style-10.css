@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #174f86;
+  --blue-dark: #003b7a;
+  --text: #101827;
+  --page: #f3f6fb;
+  --card: #ffffff;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--page);
+  color: var(--text);
+}
+
+.top-band {
+  width: 100%;
+  background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+  color: white;
+  text-align: center;
+  padding: 34px 16px 42px;
+}
+
+.app-label {
+  margin: 0 0 14px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+
+#day-title {
+  margin: 0;
+  font-size: clamp(44px, 8vw, 76px);
+  line-height: 1.05;
+  font-weight: 900;
+}
+
+.counter-grid {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 28px;
+}
+
+.counter-card {
+  min-height: 220px;
+  background: var(--card);
+  border-radius: 24px;
+  box-shadow: 0 10px 28px rgba(16, 24, 39, 0.14);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-card h2 {
+  margin: 0 0 18px;
+  color: var(--blue);
+  font-size: clamp(26px, 4vw, 36px);
+  font-weight: 900;
+}
+
+.counter-number {
+  margin-bottom: 20px;
+  font-size: clamp(60px, 8vw, 82px);
+  line-height: 1;
+  font-weight: 900;
+  color: #081121;
+}
+
+.button-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.counter-button {
+  width: 68px;
+  height: 68px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--blue);
+  color: white;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(16, 24, 39, 0.2);
+}
+
+.counter-button:active {
+  transform: scale(0.94);
+}
+
+@media (max-width: 700px) {
+  .top-band {
+    padding: 28px 14px 34px;
+  }
+
+  .app-label {
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+  }
+
+  .counter-grid {
+    padding: 18px 14px;
+    gap: 14px;
+  }
+
+  .counter-card {
+    min-height: 175px;
+    border-radius: 18px;
+  }
+
+  .counter-card h2 {
+    margin-bottom: 12px;
+  }
+
+  .counter-number {
+    margin-bottom: 14px;
+  }
+
+  .button-row {
+    gap: 12px;
+  }
+
+  .counter-button {
+    width: 52px;
+    height: 52px;
+    font-size: 34px;
+  }
+}
