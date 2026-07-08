@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOA Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="app-title">LOA TRACKER</div>
+      <h1 id="dayName">Today</h1>
+      <div id="dateText" class="date-text"></div>
+    </header>
+
+    <main class="tracker-list" aria-label="LOA daily tracker counters">
+      <section class="tracker-card pitches" data-key="pitches">
+        <div class="tracker-label">
+          <div class="icon" aria-hidden="true">⚾</div>
+          <h2>Pitches</h2>
+        </div>
+        <div class="controls">
+          <button class="counter-btn" type="button" data-action="minus" aria-label="Subtract one pitch">−</button>
+          <span class="count" id="pitches-count">0</span>
+          <button class="counter-btn" type="button" data-action="plus" aria-label="Add one pitch">+</button>
+        </div>
+      </section>
+
+      <section class="tracker-card stories" data-key="shortStories">
+        <div class="tracker-label">
+          <div class="icon" aria-hidden="true">📖</div>
+          <h2>Short Stories</h2>
+        </div>
+        <div class="controls">
+          <button class="counter-btn" type="button" data-action="minus" aria-label="Subtract one short story">−</button>
+          <span class="count" id="shortStories-count">0</span>
+          <button class="counter-btn" type="button" data-action="plus" aria-label="Add one short story">+</button>
+        </div>
+      </section>
+
+      <section class="tracker-card value" data-key="valueStatements">
+        <div class="tracker-label">
+          <div class="icon" aria-hidden="true">💎</div>
+          <h2>Value Statements</h2>
+        </div>
+        <div class="controls">
+          <button class="counter-btn" type="button" data-action="minus" aria-label="Subtract one value statement">−</button>
+          <span class="count" id="valueStatements-count">0</span>
+          <button class="counter-btn" type="button" data-action="plus" aria-label="Add one value statement">+</button>
+        </div>
+      </section>
+
+      <section class="tracker-card tables" data-key="tables">
+        <div class="tracker-label">
+          <div class="icon" aria-hidden="true">🪑</div>
+          <h2>Tables</h2>
+        </div>
+        <div class="controls">
+          <button class="counter-btn" type="button" data-action="minus" aria-label="Subtract one table">−</button>
+          <span class="count" id="tables-count">0</span>
+          <button class="counter-btn" type="button" data-action="plus" aria-label="Add one table">+</button>
+        </div>
+      </section>
+
+      <section class="tracker-card credit" data-key="creditChecks">
+        <div class="tracker-label">
+          <div class="icon" aria-hidden="true">💳</div>
+          <h2>Credit Checks</h2>
+        </div>
+        <div class="controls">
+          <button class="counter-btn" type="button" data-action="minus" aria-label="Subtract one credit check">−</button>
+          <span class="count" id="creditChecks-count">0</span>
+          <button class="counter-btn" type="button" data-action="plus" aria-label="Add one credit check">+</button>
+        </div>
+      </section>
+
+      <section class="tracker-card closes" data-key="closes">
+        <div class="tracker-label">
+          <div class="icon" aria-hidden="true">🤝</div>
+          <h2>Closes</h2>
+        </div>
+        <div class="controls">
+          <button class="counter-btn" type="button" data-action="minus" aria-label="Subtract one close">−</button>
+          <span class="count" id="closes-count">0</span>
+          <button class="counter-btn" type="button" data-action="plus" aria-label="Add one close">+</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="reset-area">
+      <button id="resetAllBtn" class="reset-btn" type="button" aria-label="Reset all counters for today">
+        <span class="reset-icon" aria-hidden="true">↻</span>
+        RESET ALL
+      </button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
