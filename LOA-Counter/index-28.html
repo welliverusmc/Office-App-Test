@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOA Tracker v5</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="phone-shell">
+    <header class="app-header">
+      <div class="app-title">LOA TRACKER</div>
+      <div id="dayName" class="day-name">Today</div>
+      <div id="dateText" class="date-text"></div>
+    </header>
+
+    <section class="tracker-list">
+      <div class="tracker-row pitches" data-key="pitches">
+        <div class="icon">⚾</div>
+        <div class="label">PITCHES</div>
+        <button class="counter-btn" data-action="minus">−</button>
+        <div class="count" id="pitches-count">0</div>
+        <button class="counter-btn" data-action="plus">+</button>
+      </div>
+
+      <div class="tracker-row stories" data-key="shortStories">
+        <div class="icon">📖</div>
+        <div class="label">SHORT STORIES</div>
+        <button class="counter-btn" data-action="minus">−</button>
+        <div class="count" id="shortStories-count">0</div>
+        <button class="counter-btn" data-action="plus">+</button>
+      </div>
+
+      <div class="tracker-row value" data-key="valueStatements">
+        <div class="icon">💎</div>
+        <div class="label">VALUE STATEMENTS</div>
+        <button class="counter-btn" data-action="minus">−</button>
+        <div class="count" id="valueStatements-count">0</div>
+        <button class="counter-btn" data-action="plus">+</button>
+      </div>
+
+      <div class="tracker-row tables" data-key="tables">
+        <div class="icon">🪑</div>
+        <div class="label">TABLES</div>
+        <button class="counter-btn" data-action="minus">−</button>
+        <div class="count" id="tables-count">0</div>
+        <button class="counter-btn" data-action="plus">+</button>
+      </div>
+
+      <div class="tracker-row credit" data-key="creditChecks">
+        <div class="icon">💳</div>
+        <div class="label">CREDIT CHECKS</div>
+        <button class="counter-btn" data-action="minus">−</button>
+        <div class="count" id="creditChecks-count">0</div>
+        <button class="counter-btn" data-action="plus">+</button>
+      </div>
+
+      <div class="tracker-row closes" data-key="closes">
+        <div class="icon">🤝</div>
+        <div class="label">CLOSES</div>
+        <button class="counter-btn" data-action="minus">−</button>
+        <div class="count" id="closes-count">0</div>
+        <button class="counter-btn" data-action="plus">+</button>
+      </div>
+    </section>
+
+    <button id="resetAll" class="reset-btn">↻ RESET ALL</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
