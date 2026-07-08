@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOA Counter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="top-band">
+      <p class="eyebrow">LOA Tracker</p>
+      <h1 id="dayTitle">Daily Counter</h1>
+      <p class="subtitle">Pitches • Stories • Value • Tables • CCs • Closes</p>
+    </header>
+
+    <section class="toolbar">
+      <button id="prevDayBtn" class="secondary-btn">Previous Day</button>
+      <div class="selected-day" id="selectedDayLabel">Today</div>
+      <button id="nextDayBtn" class="secondary-btn">Next Day</button>
+    </section>
+
+    <section class="counter-grid" id="counterGrid"></section>
+
+    <section class="summary-card">
+      <div>
+        <span class="summary-label">Total Activity</span>
+        <strong id="totalCount">0</strong>
+      </div>
+      <button id="resetBtn" class="danger-btn">Reset This Day</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
