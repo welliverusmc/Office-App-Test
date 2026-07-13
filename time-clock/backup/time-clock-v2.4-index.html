@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1422">
+  <title>Clock In / Out</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">CENTRALIZED OFFICE</p>
+        <h1>Clock In / Out</h1>
+      </div>
+      <span id="statusBadge" class="status-badge off">OFF DUTY</span>
+    </header>
+
+    <section class="clock-card">
+      <p id="todayLabel" class="date-label">Loading date...</p>
+      <div id="currentTime" class="current-time">--:--:--</div>
+      <p class="muted">Current local time</p>
+    </section>
+
+    <section class="session-card">
+      <p class="section-label">CURRENT SESSION</p>
+      <div id="sessionTimer" class="session-timer">00:00:00</div>
+      <p id="sessionMessage" class="muted">You are not currently clocked in.</p>
+    </section>
+
+    <button id="mainActionButton" class="main-action clock-in" type="button">
+      CLOCK IN
+    </button>
+
+    <p id="actionHint" class="action-hint">
+      Tap once to verify GPS and take your photo.
+    </p>
+
+
+    <section class="ticket-card">
+      <div class="ticket-heading">
+        <div>
+          <p class="section-label">TODAY'S TIME TICKET</p>
+          <h2 id="ticketDate">No completed shift yet</h2>
+        </div>
+        <span id="ticketStatus" class="ticket-status">PENDING</span>
+      </div>
+
+      <div class="ticket-grid">
+        <div>
+          <span>Clock In</span>
+          <strong id="ticketClockIn">--</strong>
+        </div>
+        <div>
+          <span>Clock Out</span>
+          <strong id="ticketClockOut">--</strong>
+        </div>
+        <div class="total-cell">
+          <span>Total Time</span>
+          <strong id="ticketTotal">00:00:00</strong>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="weekly-card">
+      <div class="weekly-heading">
+        <p class="section-label">HOURS THIS WEEK</p>
+        <strong id="weeklyTotal">0h 0m</strong>
+      </div>
+      <div id="weeklyDays" class="weekly-days">
+        <p class="weekly-empty">No hours recorded this week.</p>
+      </div>
+    </section>
+
+    <button id="resetButton" class="reset-button" type="button">Reset</button>
+
+    <input id="photoInput" type="file" accept="image/*" capture="user" hidden>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
